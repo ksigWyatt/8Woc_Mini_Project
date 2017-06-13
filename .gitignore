@@ -1,0 +1,5 @@
+#Gitignore file for various editors
+
+*.assets
+*._DS_Store
+*.DSStore
