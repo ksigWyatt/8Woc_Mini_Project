@@ -24,12 +24,12 @@
    <bottom>
       <FlowPane prefHeight="64.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="YES">
+            <Button fx:id="yes_btn" mnemonicParsing="false" onAction="#go_to_Screen1" text="YES">
                <FlowPane.margin>
                   <Insets left="100.0" />
                </FlowPane.margin>
             </Button>
-            <Button mnemonicParsing="false" text="NO">
+            <Button fx:id="no_btn" mnemonicParsing="false" text="NO">
                <FlowPane.margin>
                   <Insets left="300.0" />
                </FlowPane.margin>
