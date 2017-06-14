@@ -24,6 +24,8 @@ public class Main extends Application {
 		}
 	}
 
+	//adding a comment
+
 	public static void main(String[] args) {
 
 		//Launching and opening the program
