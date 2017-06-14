@@ -1,5 +1,7 @@
 package application;
 
+import org.apache.http.*;
+import org.apache.http.message.BasicHttpRequest;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -24,11 +26,21 @@ public class Main extends Application {
 		}
 	}
 
-	//adding a comment
-
 	public static void main(String[] args) {
+
+		//Adding HTTP request framework to make sure this is all working
+				HttpRequest request = new BasicHttpRequest("GET", "/",
+					    HttpVersion.HTTP_1_1);
+
+//					System.out.println(request.getRequestLine().getMethod());
+//					System.out.println(request.getRequestLine().getUri());
+//					System.out.println(request.getProtocolVersion());
+					System.out.println(request.getRequestLine().toString());
 
 		//Launching and opening the program
 		launch(args);
+
+
+
 	}
 }
