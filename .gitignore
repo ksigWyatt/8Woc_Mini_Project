@@ -1,5 +1,4 @@
-#Gitignore file for Xcode
+#Gitignore file for Eclipse
 
-*.assets
-*._DS_Store
-*.DSStore
+*.meta
+*/metadata/
