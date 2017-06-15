@@ -3,3 +3,4 @@
 *.meta
 *.metadata/
 */metadata/
+*.recommenders/
