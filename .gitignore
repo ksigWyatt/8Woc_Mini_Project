@@ -2,3 +2,4 @@
 
 *.meta
 */metadata/
+/target/
