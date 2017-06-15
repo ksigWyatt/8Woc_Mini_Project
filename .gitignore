@@ -1,5 +1,6 @@
 #Gitignore file for Eclipse
 
 *.meta
+*.metadata/
 */metadata/
-/target/
+*.recommenders/
