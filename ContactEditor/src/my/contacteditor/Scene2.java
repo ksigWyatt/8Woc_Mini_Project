@@ -9,12 +9,12 @@ package my.contacteditor;
  *
  * @author ann_ejones
  */
-public class ContactEditorUI extends javax.swing.JFrame {
+public class Scene2 extends javax.swing.JFrame {
 
     /**
      * Creates new form ContactEditorUI
      */
-    public ContactEditorUI() {
+    public Scene2() {
         initComponents();
     }
 
@@ -30,7 +30,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         yes_btn = new javax.swing.JButton();
         no_btn = new javax.swing.JButton();
-        save_btn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -53,14 +52,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
             }
         });
 
-        save_btn.setText("Save File");
-        save_btn.setName("save_btn"); // NOI18N
-        save_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                save_btnActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -68,9 +59,7 @@ public class ContactEditorUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(yes_btn)
-                .addGap(86, 86, 86)
-                .addComponent(save_btn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
                 .addComponent(no_btn)
                 .addGap(42, 42, 42))
         );
@@ -82,9 +71,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
                     .addComponent(yes_btn)
                     .addComponent(no_btn))
                 .addGap(20, 20, 20))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(save_btn))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Is this correct?", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
@@ -140,10 +126,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
          System.out.println("You clicked no!");
     }//GEN-LAST:event_no_btnActionPerformed
 
-    private void save_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_save_btnActionPerformed
-        System.out.println("You clicked save.");
-    }//GEN-LAST:event_save_btnActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -161,20 +143,21 @@ public class ContactEditorUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ContactEditorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Scene2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ContactEditorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Scene2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ContactEditorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Scene2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ContactEditorUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Scene2.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ContactEditorUI().setVisible(true);
+                new Scene2().setVisible(true);
             }
         });
     }
@@ -185,7 +168,6 @@ public class ContactEditorUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton no_btn;
-    private javax.swing.JButton save_btn;
     private javax.swing.JButton yes_btn;
     // End of variables declaration//GEN-END:variables
 }
