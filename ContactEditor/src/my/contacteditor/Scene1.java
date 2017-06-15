@@ -9,15 +9,10 @@ package my.contacteditor;
  *
  * @author ann_ejones
  */
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
+import javafx.application.Application;
+
 public class Scene1 extends javax.swing.JFrame {
 
     /**
@@ -60,6 +55,11 @@ public class Scene1 extends javax.swing.JFrame {
         );
 
         done_btn.setText("Translate");
+        done_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                done_btnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -127,21 +127,10 @@ public class Scene1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void upload_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upload_btnActionPerformed
-        JFileChooser fileChooser = new JFileChooser();
-        int returnValue = fileChooser.showOpenDialog(null);
-        if (returnValue == JFileChooser.APPROVE_OPTION) {
-          File selectedFile = fileChooser.getSelectedFile();
-          
-          System.out.println(selectedFile.getName());
-          successImage_label.setText("Upload complete");
-        }
-    }//GEN-LAST:event_upload_btnActionPerformed
-
-    /**
+        /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[])  {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -170,9 +159,29 @@ public class Scene1 extends javax.swing.JFrame {
             public void run() {
                 
                 new Scene1().setVisible(true);
+                new Scene2().setVisible(false);
+              
             }
         });
     }
+    private void upload_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upload_btnActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        int returnValue = fileChooser.showOpenDialog(null);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+          File selectedFile = fileChooser.getSelectedFile();
+          
+          System.out.println(selectedFile.getName());
+          successImage_label.setText("Upload complete");
+        }
+    }//GEN-LAST:event_upload_btnActionPerformed
+
+    private void done_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_done_btnActionPerformed
+       setVisible(false);
+       Scene2 scene2 = new Scene2();
+       scene2.setVisible(true);
+    }//GEN-LAST:event_done_btnActionPerformed
+
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton done_btn;
