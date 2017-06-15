@@ -75,7 +75,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="successImage_label" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="done_btn" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
@@ -86,7 +86,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="successImage_label" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="done_btn" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
@@ -95,14 +95,11 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="jLabel1">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Submit text you would like to store"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="successImage_label">
         </Component>
         <Component class="javax.swing.JButton" name="done_btn">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Done"/>
+            <Property name="text" type="java.lang.String" value="Translate"/>
           </Properties>
         </Component>
       </SubComponents>

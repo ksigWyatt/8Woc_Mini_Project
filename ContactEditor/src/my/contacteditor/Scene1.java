@@ -39,7 +39,7 @@ public class Scene1 extends javax.swing.JFrame {
         fileChooser = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        successImage_label = new javax.swing.JLabel();
         done_btn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         upload_btn = new javax.swing.JButton();
@@ -59,9 +59,7 @@ public class Scene1 extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel1.setText("Submit text you would like to store");
-
-        done_btn.setText("Done");
+        done_btn.setText("Translate");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -69,7 +67,7 @@ public class Scene1 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(successImage_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(done_btn)
                 .addContainerGap())
@@ -78,7 +76,7 @@ public class Scene1 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(successImage_label)
                     .addComponent(done_btn))
                 .addGap(0, 32, Short.MAX_VALUE))
         );
@@ -134,7 +132,9 @@ public class Scene1 extends javax.swing.JFrame {
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
           File selectedFile = fileChooser.getSelectedFile();
+          
           System.out.println(selectedFile.getName());
+          successImage_label.setText("Upload complete");
         }
     }//GEN-LAST:event_upload_btnActionPerformed
 
@@ -168,6 +168,7 @@ public class Scene1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                
                 new Scene1().setVisible(true);
             }
         });
@@ -176,10 +177,10 @@ public class Scene1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton done_btn;
     private javax.swing.JFileChooser fileChooser;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JLabel successImage_label;
     private javax.swing.JButton upload_btn;
     // End of variables declaration//GEN-END:variables
 }
