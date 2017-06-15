@@ -12,7 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Main {
 	
 	static int lengthOfWord = 5;
-	static HashMap<String, String> hash = new HashMap<String, String>();
+	HashMap<Integer, String> hash = new HashMap<Integer, String>();
 	
 	public static void main(String[] args) throws 
 					JsonParseException, JsonMappingException, IOException {
@@ -29,13 +29,25 @@ public class Main {
 		
         
 		JSONObject[] letters = new JSONObject[lengthOfWord];
+		JSONItem items = new JSONItem();
+		IMG image = new IMG();
+		
 		for (int i = 0; i < letters.length; i++) {
 			
-			JSONItem items = new JSONItem();
+			
 			
 			for (int j = 0; j < 1; j++) {
 				
 				System.out.println("the X_dim value is " + items.getX_dim());
+				System.out.println("the Y_dim value is " + items.getY_dim());
+				System.out.println("the x_start value is " + items.getX_start());
+				System.out.println("the Y_start value is " + items.getY_start());
+				
+				for (int z = 0; z < 100; z++) {
+					
+// 					hash.put(z, IMG.getValue());
+					
+				}
 				
 				
 			}

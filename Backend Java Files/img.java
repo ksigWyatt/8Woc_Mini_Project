@@ -1,6 +1,6 @@
 
 
-public class img {
+public class IMG {
 	private int value;
 
 	public int getValue() {
