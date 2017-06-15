@@ -1,6 +1,6 @@
+package com.mykong.json;
 
-
-public class JSONObject {
+public class jsonobject {
 	
 	private JSONItem[] item;
 
