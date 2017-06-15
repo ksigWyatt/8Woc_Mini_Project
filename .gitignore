@@ -1,4 +1,5 @@
 #Gitignore file for Eclipse
 
 *.meta
+*.metadata/
 */metadata/
