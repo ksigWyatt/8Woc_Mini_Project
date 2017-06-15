@@ -1,4 +1,4 @@
-
+package com.mykong.json;
 
 public class IMG {
 	private int value;
@@ -10,6 +10,4 @@ public class IMG {
 	public void setValue(int value) {
 		this.value = value;
 	}
-	
-
 }
