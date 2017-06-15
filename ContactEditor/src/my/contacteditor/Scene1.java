@@ -11,7 +11,7 @@ package my.contacteditor;
  */
 import java.io.File;
 import javax.swing.JFileChooser;
-import javafx.application.Application;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class Scene1 extends javax.swing.JFrame {
 
@@ -166,12 +166,17 @@ public class Scene1 extends javax.swing.JFrame {
     }
     private void upload_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upload_btnActionPerformed
         JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setAcceptAllFileFilterUsed(false);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("Images", "png", "JPEG file", "jpg", "jpeg", "exif", "tiff", "bmp");
+        
+        fileChooser.addChoosableFileFilter(filter);
+        
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
-          File selectedFile = fileChooser.getSelectedFile();
-          
-          System.out.println(selectedFile.getName());
-          successImage_label.setText("Upload complete");
+        File selectedFile = fileChooser.getSelectedFile();
+
+        System.out.println(selectedFile.getName());
+        successImage_label.setText("Upload complete");
         }
     }//GEN-LAST:event_upload_btnActionPerformed
 
