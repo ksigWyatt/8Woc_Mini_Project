@@ -1,3 +1,0 @@
-/home/ash/projects/ExtractLetters/build/CMakeFiles/rebuild_cache.dir
-/home/ash/projects/ExtractLetters/build/CMakeFiles/edit_cache.dir
-/home/ash/projects/ExtractLetters/build/CMakeFiles/ExtractLetters.dir
