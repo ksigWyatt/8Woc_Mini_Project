@@ -9,15 +9,9 @@ package my.contacteditor;
  *
  * @author ann_ejones
  */
-import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
-
-import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFileChooser;
-import javax.swing.JFrame;
+
 public class Scene1 extends javax.swing.JFrame {
 
     /**
@@ -39,7 +33,7 @@ public class Scene1 extends javax.swing.JFrame {
         fileChooser = new javax.swing.JFileChooser();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        done_label = new javax.swing.JLabel();
         done_btn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         upload_btn = new javax.swing.JButton();
@@ -59,9 +53,12 @@ public class Scene1 extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jLabel1.setText("Submit text you would like to store");
-
         done_btn.setText("Done");
+        done_btn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                done_btnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -69,7 +66,7 @@ public class Scene1 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(done_label)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(done_btn)
                 .addContainerGap())
@@ -78,7 +75,7 @@ public class Scene1 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
+                    .addComponent(done_label)
                     .addComponent(done_btn))
                 .addGap(0, 32, Short.MAX_VALUE))
         );
@@ -128,15 +125,23 @@ public class Scene1 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    //MTT uploads file
     private void upload_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upload_btnActionPerformed
         JFileChooser fileChooser = new JFileChooser();
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
           File selectedFile = fileChooser.getSelectedFile();
           System.out.println(selectedFile.getName());
-        }
+          done_label.setText("File has been successfully uploaded");
+          }
     }//GEN-LAST:event_upload_btnActionPerformed
+    
+    //move to next scene
+    private void done_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_done_btnActionPerformed
+        setVisible(false);
+               
+    }//GEN-LAST:event_done_btnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,17 +171,21 @@ public class Scene1 extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+        
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Scene1().setVisible(true);
+                
+                
             }
         });
     }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton done_btn;
+    private javax.swing.JLabel done_label;
     private javax.swing.JFileChooser fileChooser;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
