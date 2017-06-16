@@ -1,7 +1,7 @@
 package faffimg;
 
 public class JSONItem {
-	private int [] img;
+	private int[] img;
 	private int x_start;
 	private int y_start;
 	private int x_dim;
@@ -39,7 +39,7 @@ public class JSONItem {
 		this.y_dim = y_dim;
 	}
 	
-	public void setImg(int [] newImg){
+	public void setImg(int[] newImg){
 		this.img = newImg;
 	}
 	
