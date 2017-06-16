@@ -1,11 +1,7 @@
-package com.mycompany.wocofficial;
-
-
-
-
+package faffimg;
 
 public class JSONItem implements Comparable<JSONItem>{
-	private int [] img;
+	private int[] img;
 	private int x_start;
 	private int y_start;
 	private int x_dim;
@@ -43,17 +39,18 @@ public class JSONItem implements Comparable<JSONItem>{
 		this.y_dim = y_dim;
 	}
 	
-	public void setImg(int [] newImg){
+	public void setImg(int[] newImg){
 		this.img = newImg;
 	}
 	
 	public int[] getImg(){
 		return this.img;
+
 	}
 	
-	public int compareTo(JSONItem item){
-		int compareQuantity = ((JSONItem) item).getX_dim();
+	public int compareTo(JSONItem item) {
+		int compareQuanitity = ((JSONItem) item).getX_dim();
 		
-		return compareQuantity - this.getX_dim();
-	}
+		return compareQuanitity - this.getX_dim();
+	}	
 }
