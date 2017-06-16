@@ -78,8 +78,10 @@ public class Test {
     		hash.put(x, value);
     		//System.out.println(b);
     		
+    		System.out.println("the hash value for " + x + " is " + hash.get(x));
+    		
     		//addToArray(value);
-    		System.out.println("HashMap is: " + hash);
+    		//System.out.println("HashMap is: " + hash);
     		x++;
     		
     	}
