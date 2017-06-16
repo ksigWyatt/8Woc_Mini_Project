@@ -69,10 +69,19 @@ public class Test {
 //    		 System.out.println(imgs.getValue());
 //    	}
     	
-    	for (int b : j.getImg()) {   		
+    	int x = 0;
+    	for (int value : j.getImg()) {   		
+    		
+    		int valSize = j.getImg().length;
+    		
+    		HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
+    		hash.put(x, value);
     		//System.out.println(b);
     		
-    		addToArray(b);
+    		//addToArray(value);
+    		System.out.println("HashMap is: " + hash);
+    		x++;
+    		
     	}
     	
     	System.out.println();
@@ -96,15 +105,15 @@ public class Test {
 //		}
 //	}
  }
-	public static int[] addToArray(int b) {
-		int[] imgArray = new int[100];
-		int i = 0;
-		
-		imgArray[i] = b;
-		i++;
-		
-		//System.out.println(Arrays.toString(imgArray));
-		//System.out.println();
-		return imgArray;
-	}
+//	public static int[] addToArray(int b) {
+//		int[] imgArray = new int[100];
+//		int i = 0;
+//		
+//		imgArray[i] = b;
+//		i++;
+//		
+//		//System.out.println(Arrays.toString(imgArray));
+//		//System.out.println();
+//		return imgArray;
+//	}
 }
