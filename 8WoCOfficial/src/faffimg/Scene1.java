@@ -66,8 +66,8 @@ public class Scene1 extends javax.swing.JFrame {
          java.awt.EventQueue.invokeLater(new Runnable() {
              public void run() {
                  
-                 new Scene1().setVisible(true);
-                 new Scene2().setVisible(false);
+                 setVisible(true);
+                 //new Scene2().setVisible(false);
                                 
                
              }
@@ -267,10 +267,7 @@ public class Scene1 extends javax.swing.JFrame {
     	}
       }
     }//GEN-LAST:event_upload_btnActionPerformed
-    /*public String getName()
-    {      
-        return fileLocation;
-    }*/
+    
     private void done_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_done_btnActionPerformed
        setVisible(false);
        Scene2 scene2 = new Scene2();
