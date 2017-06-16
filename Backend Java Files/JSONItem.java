@@ -1,6 +1,5 @@
 
 
-import com.mykong.json.JSONItem;
 
 public class JSONItem implements Comparable<JSONItem>{
 	private int [] img;
