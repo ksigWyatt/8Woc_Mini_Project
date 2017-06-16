@@ -35,12 +35,11 @@ public class Test {
  public static void main(String[] args) throws ClassNotFoundException, 
 	JsonParseException, JsonMappingException , IOException {
 	 
-	 JSONParser parser = new JSONParser();
 	 ObjectMapper mapper = new ObjectMapper();
 	 HttpClient client = HttpClientBuilder.create().build();
 	 
 	 HttpPost httppost = new HttpPost("http://172.19.144.219:12345/images");
-	 FileBody bin = new FileBody(new File("testing.png"));
+	 FileBody bin = new FileBody(new File("template_h.png"));
 	 HttpEntity reqEntity = MultipartEntityBuilder.create()
 		        .addPart("bin", bin)
 		        .build();
@@ -57,7 +56,11 @@ public class Test {
     
     System.out.println("There are " + temp.size() + " letters found. \n" );
     
-    for (JSONItem j: temp){
+    //Sorting items
+    //Collections.sort(arg0);
+    
+    for (JSONItem j: temp) {
+    	int y[] = new int[1000];
     	System.out.println("Letter number " + i);
     	System.out.println("X Start "+ j.getX_start());
     	System.out.println("Y Start " + j.getY_start());
@@ -70,52 +73,39 @@ public class Test {
 //    	}
     	
     	int x = 0;
-    	for (int value : j.getImg()) {   		
+    	
+    	int index = 0;
+    	
+    	
+    	for (int value : j.getImg()) {   
+    		
     		
     		int valSize = j.getImg().length;
     		
-    		HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
-    		hash.put(x, value);
+    		
+    		y[index] = value;
+    		System.out.println(y[index]);
+    		index++;
+    		
+    		
     		//System.out.println(b);
     		
-    		System.out.println("the hash value for " + x + " is " + hash.get(x));
+    		//y[i] = hash.get(i);
+    		
+    		HashMap<String, Integer[]> newHash = new HashMap<String, Integer[]>(); 
+    		 		
+    		
+    		//System.out.println("the hash value for " + x + " is " + hash.get(x));
     		
     		//addToArray(value);
     		//System.out.println("HashMap is: " + hash);
     		x++;
     		
     	}
+    	index = 0;
     	
     	System.out.println();
     	i++;
     }
-    //String what = EntityUtils.toString(response.getEntity()).toString();
-    
-    
-    
-//    for (int i = 0; i < 5; i++) {
-//    	System.out.println("\nLetter " + i);
-//		for (int j = 0; j < 1; j++) {	
-//			System.out.println("the X_dim value is " + items.getX_dim());
-//			System.out.println("the Y_dim value is " + items.getY_dim());
-//			System.out.println("the x_start value is " + items.getX_start());
-//			System.out.println("the Y_start value is " + items.getY_start());
-//			
-//			for (int z = 0; z < 100; z++) {
-//				System.out.println(image.getValue());
-//			}
-//		}
-//	}
  }
-//	public static int[] addToArray(int b) {
-//		int[] imgArray = new int[100];
-//		int i = 0;
-//		
-//		imgArray[i] = b;
-//		i++;
-//		
-//		//System.out.println(Arrays.toString(imgArray));
-//		//System.out.println();
-//		return imgArray;
-//	}
 }

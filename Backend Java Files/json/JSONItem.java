@@ -1,6 +1,6 @@
 package faffimg;
 
-public class JSONItem {
+public class JSONItem implements Comparable<JSONItem>{
 	private int[] img;
 	private int x_start;
 	private int y_start;
@@ -45,5 +45,12 @@ public class JSONItem {
 	
 	public int[] getImg(){
 		return this.img;
+
 	}
+	
+	public int compareTo(JSONItem item) {
+		int compareQuanitity = ((JSONItem) item).getX_dim();
+		
+		return compareQuanitity - this.getX_dim();
+	}	
 }
