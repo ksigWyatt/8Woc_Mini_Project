@@ -10,20 +10,20 @@ public class TextFileWriter {
     
     public static void main(String args[]){
 
-        Scanner scan = new Scanner(/*file name or something?*/System.in);
+        Scanner scan = new Scanner(/*file name of results from API?*/System.in);
         String text = scan.nextLine();
         FileWriter fWriter = null;
         BufferedWriter writer = null;
         try
         {
-          fWriter = new FileWriter("text.txt");
+          fWriter = new FileWriter("Translation.txt");
           writer = new BufferedWriter(fWriter);
           writer.write(text);
           writer.newLine();
           writer.close();
         } 
         catch (Exception e) {
-            System.out.println("Error!");
+            System.out.println(e);
         }
     }
 

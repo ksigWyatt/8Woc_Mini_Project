@@ -24,4 +24,17 @@ public class ErrorCalc
 			
 			System.out.println("Resulting difference is " + difference);
 		}
+		
+		//TO_DO: pass in hashmap for training set rather than int array, then have it return a character
+		public double calculateConfidence(int[] traingSet, int[] imageSet){
+			public static final MAX_RANGE = 2550; //sqrt(100 * pow(255, 2))
+			int sum = 0; 
+			//create for loop that iterates through each element in a hasmap 
+			for(int index = 0; index < trainingSet.length; index++){  //for loop for iterating through each element in the training set hash map
+				//calculate variable range
+				for(int imgIndex = 0; imgIndex < imageSet.length; imgIndex++){
+					adder = pow(trainingSet[imgIndex] - imageSet[imgIndex]); //WILL CHANGE
+					sum = sum + adder;
+			}
+		}
 	}
