@@ -47,7 +47,30 @@ public class Test {
 	httppost.setEntity(reqEntity);
 	HttpResponse response = client.execute(httppost);	
 	return EntityUtils.toString(response.getEntity());
- }
+
+
+
+
+	int x = 0;
+    for (int value : j.getImg()) {   		
+    		
+    	int valSize = j.getImg().length;
+    		
+    	HashMap<Integer, Integer> hash = new HashMap<Integer, Integer>();
+    	hash.put(x, value);
+    	//System.out.println(b);
+    		
+    	System.out.println("the hash value for " + x + " is " + hash.get(x));
+    		
+    	//addToArray(value);
+    	//System.out.println("HashMap is: " + hash);
+    	x++;
+    		
+    }
+    	
+    System.out.println();
+    i++;
+}
  
  //function will map the string containing the information on the JSON objects
  //to an array list of objects and return that array list
