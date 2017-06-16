@@ -1,7 +1,7 @@
-package com.mykong.json;
+package faffimg;
 
 public class JSONItem {
-	private int [] img = new int[100];
+	private int [] img;
 	private int x_start;
 	private int y_start;
 	private int x_dim;

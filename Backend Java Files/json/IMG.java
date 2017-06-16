@@ -1,4 +1,4 @@
-package com.mykong.json;
+package faffimg;
 
 public class IMG {
 	private int value;

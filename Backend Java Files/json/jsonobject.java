@@ -1,6 +1,6 @@
-package com.mykong.json;
+package faffimg;
 
-public class jsonobject {
+public class JSONObject {
 	
 	private JSONItem[] item;
 
