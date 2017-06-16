@@ -1,4 +1,4 @@
-package faffimg;
+
 
 public class IMG {
 	private int value;

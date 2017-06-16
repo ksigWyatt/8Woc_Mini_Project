@@ -1,4 +1,4 @@
-package faffimg;
+
 import java.awt.List;
 import java.io.File;
 import java.io.IOException;
@@ -42,8 +42,6 @@ public class Test {
 	httppost.setEntity(reqEntity);
 	HttpResponse response = client.execute(httppost);
 	
-	//try(FileWriter file = new FileWriter(""))
-	
     mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     
     String jsonString = EntityUtils.toString(response.getEntity());
@@ -55,30 +53,8 @@ public class Test {
     	System.out.println("X Start "+ j.getX_start());
     	System.out.println("Y Start " + j.getY_start());
     	System.out.println("X Dim " + j.getX_dim());
-    	System.out.println("Y Dim " + j.getY_dim());
-    	
-//    	for (IMG m: image){
-//    		System.out.println("img is: " + m.getValue() +  "\n");
-//    	}
-    	
+    	System.out.println("Y Dim " + j.getY_dim());    	
     	i++;
     }
-    //String what = EntityUtils.toString(response.getEntity()).toString();
-    
-    
-    
-//    for (int i = 0; i < 5; i++) {
-//    	System.out.println("\nLetter " + i);
-//		for (int j = 0; j < 1; j++) {	
-//			System.out.println("the X_dim value is " + items.getX_dim());
-//			System.out.println("the Y_dim value is " + items.getY_dim());
-//			System.out.println("the x_start value is " + items.getX_start());
-//			System.out.println("the Y_start value is " + items.getY_start());
-//			
-//			for (int z = 0; z < 100; z++) {
-//				System.out.println(image.getValue());
-//			}
-//		}
-//	}
  }
 }
