@@ -16,13 +16,17 @@ import org.apache.http.util.EntityUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.*;
 
- 
+import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
+
+
 public class Main {
 
 	static ArrayList<JSONItem> templates = new ArrayList<>();
 
  public static void main(String[] args) throws ClassNotFoundException, IOException {
 	 
+	 Scene1 starting = new Scene1();
+
 	 new Scene1();
 
 	 Main main = new Main();

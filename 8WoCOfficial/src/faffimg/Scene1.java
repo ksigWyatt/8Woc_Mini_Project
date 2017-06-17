@@ -15,7 +15,8 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.*;
+import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFileChooser;
@@ -34,7 +35,11 @@ import org.json.simple.parser.JSONParser;
 
 public class Scene1 extends javax.swing.JFrame {
 
+	//Creating Global Variables
+	HashMap<String, ArrayList<Integer>> letterHash = null;
+	ArrayList<Integer> listOfImgValues = null;
 
+	
     /**
      * Creates new form Scene1
      */
@@ -67,7 +72,6 @@ public class Scene1 extends javax.swing.JFrame {
              public void run() {
                  
                  setVisible(true);
-
                
              }
          });
@@ -89,7 +93,7 @@ public class Scene1 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         successImage_label = new javax.swing.JLabel();
         done_btn = new javax.swing.JButton();
-        save_btn = new javax.swing.JButton();
+        //save_btn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         upload_btn = new javax.swing.JButton();
 
@@ -115,12 +119,12 @@ public class Scene1 extends javax.swing.JFrame {
             }
         });
 
-        save_btn.setText("Temp Save Button");
-        save_btn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                save_btnActionPerformed(evt);
-            }
-        });
+//        save_btn.setText("Temp Save Button");
+//        save_btn.addActionListener(new java.awt.event.ActionListener() {
+//            public void actionPerformed(java.awt.event.ActionEvent evt) {
+//                save_btnActionPerformed(evt);
+//            }
+//        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -133,7 +137,6 @@ public class Scene1 extends javax.swing.JFrame {
                 .addComponent(done_btn)
                 .addContainerGap())
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addComponent(save_btn)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -142,8 +145,7 @@ public class Scene1 extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(successImage_label)
                     .addComponent(done_btn))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(save_btn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE))
         );
 
         upload_btn.setText("Upload Image");
@@ -192,12 +194,11 @@ public class Scene1 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-        /**
-     * @param args the command line arguments
-     */
+ 
 
     private void upload_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upload_btnActionPerformed
-    //private void upload_btnActionPerformed(java.awt.event.ActionEvent evt) 
+    
+    	
         JFileChooser fileChooser = new JFileChooser();
         fileChooser.setAcceptAllFileFilterUsed(false);
         FileNameExtensionFilter filter = new FileNameExtensionFilter("Images", "png", "JPEG file", "jpg", "jpeg", "exif", "tiff", "bmp");
@@ -216,11 +217,12 @@ public class Scene1 extends javax.swing.JFrame {
 
 	        successImage_label.setText("Upload complete");
         }
-    }//GEN-LAST:event_upload_btnActionPerformed
-    /*public String getName()
-    {      
-        return fileLocation;
-    }*/
+
+	        successImage_label.setText("Upload complete");
+	        
+		 
+  	}
+    
     private void done_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_done_btnActionPerformed
        setVisible(false);
        Scene2 scene2 = new Scene2();
@@ -247,7 +249,7 @@ public class Scene1 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JButton save_btn;
+    //private javax.swing.JButton save_btn;
     private javax.swing.JLabel successImage_label;
     private javax.swing.JButton upload_btn;
     // End of variables declaration//GEN-END:variables
