@@ -66,9 +66,8 @@ public class Scene1 extends javax.swing.JFrame {
          java.awt.EventQueue.invokeLater(new Runnable() {
              public void run() {
                  
-                 new Scene1().setVisible(true);
-                 new Scene2().setVisible(false);
-                                
+                 setVisible(true);
+
                
              }
          });
@@ -208,64 +207,15 @@ public class Scene1 extends javax.swing.JFrame {
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
 	        File selectedFile = fileChooser.getSelectedFile();
-	        
-	        fileLocation = selectedFile.getAbsolutePath();
-	        //System.out.println(selectedFile.getAbsolutePath());
+
+            ArrayList<JSONItem> img = Main.postImage(selectedFile.getAbsolutePath());
+            Main.getTemplates();
+
+            Main.compareLetters(img);
+
+
 	        successImage_label.setText("Upload complete");
-	        
-		 
-	        ObjectMapper mapper = new ObjectMapper();
-	        HttpClient client = HttpClientBuilder.create().build();
-	        
-	        
-	        HttpPost httppost = new HttpPost("http://172.19.144.219:12345/images");
-	        FileBody bin = new FileBody(new File(fileLocation));
-	        
-	        HttpEntity reqEntity = MultipartEntityBuilder.create()
-			        .addPart("bin", bin)
-			        .build();
-		httppost.setEntity(reqEntity);
-		HttpResponse response = null;
-            try {
-                response = client.execute(httppost);
-            } catch (IOException ex) {
-                Logger.getLogger(Scene1.class.getName()).log(Level.SEVERE, null, ex);
-            }
-	
-	//try(FileWriter file = new FileWriter(""))
-	
-    mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-    
-    String jsonString = null;
-            try {
-                jsonString = EntityUtils.toString(response.getEntity());
-            } catch (IOException ex) {
-                Logger.getLogger(Scene1.class.getName()).log(Level.SEVERE, null, ex);
-            } catch (ParseException ex) {
-                Logger.getLogger(Scene1.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    ArrayList<JSONItem> temp = null;
-            try {
-                temp = mapper.readValue(jsonString, new TypeReference<ArrayList<JSONItem>>() {});
-            } catch (IOException ex) {
-                Logger.getLogger(Scene1.class.getName()).log(Level.SEVERE, null, ex);
-            }
-    int i = 0;
-    
-	    for (JSONItem j: temp){
-	    	System.out.println("Letter number " + i);
-	    	System.out.println("X Start "+ j.getX_start());
-	    	System.out.println("Y Start " + j.getY_start());
-	    	System.out.println("X Dim " + j.getX_dim());
-	    	System.out.println("Y Dim " + j.getY_dim());
-	    	
-	//    	for (IMG m: image){
-	//    		System.out.println("img is: " + m.getValue() +  "\n");
-	//    	}
-	    	
-	    	i++;
-    	}
-      }
+        }
     }//GEN-LAST:event_upload_btnActionPerformed
     /*public String getName()
     {      

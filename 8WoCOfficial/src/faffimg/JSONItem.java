@@ -6,6 +6,7 @@ public class JSONItem implements Comparable<JSONItem>{
 	private int y_start;
 	private int x_dim;
 	private int y_dim;
+	private String letter;
 	
 	public int getX_start() {
 		return x_start;
@@ -47,10 +48,22 @@ public class JSONItem implements Comparable<JSONItem>{
 		return this.img;
 
 	}
-	
+
+	@Override
 	public int compareTo(JSONItem item) {
-		int compareQuanitity = ((JSONItem) item).getX_dim();
-		
-		return compareQuanitity - this.getX_dim();
-	}	
+		if (this.getX_start() > item.getX_start())
+			return 1;
+		else if (this.getX_start() == item.getX_start())
+			return 0;
+
+		return -1;
+	}
+
+	public String getLetter() {
+		return letter;
+	}
+
+	public void setLetter(String letter) {
+		this.letter = letter;
+	}
 }
