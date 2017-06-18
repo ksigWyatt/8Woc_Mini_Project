@@ -10,28 +10,11 @@ package faffimg;
  *
  * @author ann_ejones
  */
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
-import java.io.IOException;
 import java.util.*;
 import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
-import org.apache.http.ParseException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 public class Scene1 extends javax.swing.JFrame {
 
@@ -93,7 +76,6 @@ public class Scene1 extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         successImage_label = new javax.swing.JLabel();
         done_btn = new javax.swing.JButton();
-        //save_btn = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         upload_btn = new javax.swing.JButton();
 
@@ -118,13 +100,6 @@ public class Scene1 extends javax.swing.JFrame {
                 done_btnActionPerformed(evt);
             }
         });
-
-//        save_btn.setText("Temp Save Button");
-//        save_btn.addActionListener(new java.awt.event.ActionListener() {
-//            public void actionPerformed(java.awt.event.ActionEvent evt) {
-//                save_btnActionPerformed(evt);
-//            }
-//        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

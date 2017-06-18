@@ -15,9 +15,6 @@ import org.apache.http.util.EntityUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.*;
 
-import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
-
-
 public class Main {
 
 	static ArrayList<JSONItem> templates = new ArrayList<>();
@@ -25,13 +22,8 @@ public class Main {
 	static Scene2 scene2 = new Scene2();
 
  public static void main(String[] args) throws ClassNotFoundException, IOException {
-	 
 	 Scene1 starting = new Scene1();
-
-	 //new Scene1();
-
 	 Main main = new Main();
-
  }
 
  public static void compareLetters(ArrayList<JSONItem> imgData) {
@@ -83,13 +75,12 @@ public class Main {
 	 	System.out.println(e);
 	 }
 	 FileReader reader = new FileReader("Hello.txt");
-	 //scene2.outputTranscription.read(reader, "Hello.txt");
 	 for (String str : outputTextArray){
 		output = output + str;
 	 }
 	 System.out.println(output);
 	 scene2.outputTranscription.setText(output);
-	 scene2.outputTranscription.revalidate();
+	 scene2.outputTranscription.validate();
 	 scene2.outputTranscription.repaint();
  }
 

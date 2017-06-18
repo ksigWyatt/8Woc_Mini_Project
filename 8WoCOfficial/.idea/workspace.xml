@@ -21,14 +21,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/faffimg/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="92" column="42" lean-forward="false" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
+            <state relative-caret-position="-1594">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#745#753#0" expanded="true" />
+                <element signature="e#683#691#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -37,28 +37,9 @@
       <file leaf-file-name="JSONItem.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/faffimg/JSONItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="-161">
               <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-              <folding>
-                <element signature="e#228#229#0" expanded="false" />
-                <element signature="e#249#250#0" expanded="false" />
-                <element signature="e#289#290#0" expanded="false" />
-                <element signature="e#318#319#0" expanded="false" />
-                <element signature="e#346#347#0" expanded="false" />
-                <element signature="e#367#368#0" expanded="false" />
-                <element signature="e#407#408#0" expanded="false" />
-                <element signature="e#436#437#0" expanded="false" />
-                <element signature="e#462#463#0" expanded="false" />
-                <element signature="e#481#482#0" expanded="false" />
-                <element signature="e#517#518#0" expanded="false" />
-                <element signature="e#542#543#0" expanded="false" />
-                <element signature="e#568#569#0" expanded="false" />
-                <element signature="e#587#588#0" expanded="false" />
-                <element signature="e#623#624#0" expanded="false" />
-                <element signature="e#648#649#0" expanded="false" />
-                <element signature="e#685#686#0" expanded="false" />
-                <element signature="e#709#710#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,30 +47,28 @@
       <file leaf-file-name="Scene1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/faffimg/Scene1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="20" />
+            <state relative-caret-position="27">
+              <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3040#3129#0" expanded="true" />
-                <element signature="e#6213#6214#0" expanded="true" />
-                <element signature="e#6275#6276#0" expanded="true" />
+                <element signature="e#2294#2383#0" expanded="true" />
+                <element signature="e#5141#5142#0" expanded="true" />
+                <element signature="e#5203#5204#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Scene2.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Scene2.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/faffimg/Scene2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-                <element signature="e#668#698#0" expanded="true" />
-                <element signature="e#703#792#0" expanded="true" />
-                <element signature="e#5271#5358#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
+                <element signature="e#634#664#0" expanded="true" />
+                <element signature="e#669#758#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,9 +93,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/faffimg/JSONItem.java" />
-        <option value="$PROJECT_DIR$/src/faffimg/Scene2.java" />
-        <option value="$PROJECT_DIR$/src/faffimg/Scene1.java" />
         <option value="$PROJECT_DIR$/src/faffimg/Main.java" />
+        <option value="$PROJECT_DIR$/src/faffimg/Scene1.java" />
+        <option value="$PROJECT_DIR$/src/faffimg/Scene2.java" />
       </list>
     </option>
   </component>
@@ -539,7 +518,7 @@
           <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
+            <element signature="e#683#691#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,26 +527,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#228#229#0" expanded="false" />
-            <element signature="e#249#250#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#318#319#0" expanded="false" />
-            <element signature="e#346#347#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#407#408#0" expanded="false" />
-            <element signature="e#436#437#0" expanded="false" />
-            <element signature="e#462#463#0" expanded="false" />
-            <element signature="e#481#482#0" expanded="false" />
-            <element signature="e#517#518#0" expanded="false" />
-            <element signature="e#542#543#0" expanded="false" />
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#648#649#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#709#710#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -577,9 +537,9 @@
           <caret line="223" column="4" lean-forward="false" selection-start-line="223" selection-start-column="4" selection-end-line="223" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3040#3129#0" expanded="true" />
-            <element signature="e#6213#6214#0" expanded="true" />
-            <element signature="e#6275#6276#0" expanded="true" />
+            <element signature="e#2294#2383#0" expanded="true" />
+            <element signature="e#5141#5142#0" expanded="true" />
+            <element signature="e#5203#5204#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -589,12 +549,10 @@
         <state relative-caret-position="1035">
           <caret line="160" column="13" lean-forward="true" selection-start-line="160" selection-start-column="13" selection-end-line="160" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#668#698#0" expanded="true" />
-            <element signature="e#703#792#0" expanded="true" />
-            <element signature="e#5271#5358#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#634#664#0" expanded="true" />
+            <element signature="e#669#758#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -611,33 +569,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/faffimg/JSONItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#228#229#0" expanded="false" />
-            <element signature="e#249#250#0" expanded="false" />
-            <element signature="e#289#290#0" expanded="false" />
-            <element signature="e#318#319#0" expanded="false" />
-            <element signature="e#346#347#0" expanded="false" />
-            <element signature="e#367#368#0" expanded="false" />
-            <element signature="e#407#408#0" expanded="false" />
-            <element signature="e#436#437#0" expanded="false" />
-            <element signature="e#462#463#0" expanded="false" />
-            <element signature="e#481#482#0" expanded="false" />
-            <element signature="e#517#518#0" expanded="false" />
-            <element signature="e#542#543#0" expanded="false" />
-            <element signature="e#568#569#0" expanded="false" />
-            <element signature="e#587#588#0" expanded="false" />
-            <element signature="e#623#624#0" expanded="false" />
-            <element signature="e#648#649#0" expanded="false" />
-            <element signature="e#685#686#0" expanded="false" />
-            <element signature="e#709#710#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home/src.zip!/java/awt/event/ActionListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="388">
@@ -648,39 +579,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/faffimg/Scene1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="212" column="20" lean-forward="false" selection-start-line="212" selection-start-column="12" selection-end-line="212" selection-end-column="20" />
+        <state relative-caret-position="27">
+          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3040#3129#0" expanded="true" />
-            <element signature="e#6213#6214#0" expanded="true" />
-            <element signature="e#6275#6276#0" expanded="true" />
+            <element signature="e#2294#2383#0" expanded="true" />
+            <element signature="e#5141#5142#0" expanded="true" />
+            <element signature="e#5203#5204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/faffimg/JSONItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-161">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/faffimg/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1594">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#683#691#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/faffimg/Scene2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="154" column="13" lean-forward="true" selection-start-line="154" selection-start-column="13" selection-end-line="154" selection-end-column="13" />
+        <state relative-caret-position="90">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#668#698#0" expanded="true" />
-            <element signature="e#703#792#0" expanded="true" />
-            <element signature="e#5271#5358#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/faffimg/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="92" column="42" lean-forward="false" selection-start-line="92" selection-start-column="42" selection-end-line="92" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#745#753#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+            <element signature="e#634#664#0" expanded="true" />
+            <element signature="e#669#758#0" expanded="true" />
           </folding>
         </state>
       </provider>
