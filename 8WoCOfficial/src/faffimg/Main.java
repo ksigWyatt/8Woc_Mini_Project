@@ -1,9 +1,8 @@
 package faffimg;
 
+import java.io.*;
 import java.util.*;
 //import java.awt.List;
-import java.io.File;
-import java.io.IOException;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -22,12 +21,14 @@ import javax.xml.bind.annotation.adapters.HexBinaryAdapter;
 public class Main {
 
 	static ArrayList<JSONItem> templates = new ArrayList<>();
+	static ArrayList<String> outputTextArray = new ArrayList<String>();
+	static Scene2 scene2 = new Scene2();
 
  public static void main(String[] args) throws ClassNotFoundException, IOException {
 	 
 	 Scene1 starting = new Scene1();
 
-	 new Scene1();
+	 //new Scene1();
 
 	 Main main = new Main();
 
@@ -61,10 +62,35 @@ public class Main {
 		 String s = resultSet.get(minKey);
 
 		 //START HERE
-
+		outputTextArray.add(s);
 		 System.out.println( s );
-
 	 }
+ }
+
+ public static void outputText()throws FileNotFoundException, IOException{
+	 FileWriter fwriter = null;
+	 BufferedWriter writer = null;
+	 String output = "";
+
+	 try{
+	 	File file = new File("Hello.txt");
+	 	writer = new BufferedWriter(new FileWriter(file));
+	 	for (String str : outputTextArray){
+	 		writer.write(str);
+		}
+		writer.close();
+	 }catch (Exception e){
+	 	System.out.println(e);
+	 }
+	 FileReader reader = new FileReader("Hello.txt");
+	 //scene2.outputTranscription.read(reader, "Hello.txt");
+	 for (String str : outputTextArray){
+		output = output + str;
+	 }
+	 System.out.println(output);
+	 scene2.outputTranscription.setText(output);
+	 scene2.outputTranscription.revalidate();
+	 scene2.outputTranscription.repaint();
  }
 
  public static void getTemplates() {
@@ -87,7 +113,7 @@ public class Main {
 	 HashMap<String, ArrayList<Integer>> letterHash;
 	 ArrayList<Integer> listOfImgValues;
 
-	 HttpPost httppost = new HttpPost("http://172.19.144.219:12345/images");
+	 HttpPost httppost = new HttpPost("http://localhost:12345/images");
 
 	 FileBody bin = new FileBody(new File(filepath));
 

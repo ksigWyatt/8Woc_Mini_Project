@@ -38,8 +38,8 @@ public class Scene1 extends javax.swing.JFrame {
 	//Creating Global Variables
 	HashMap<String, ArrayList<Integer>> letterHash = null;
 	ArrayList<Integer> listOfImgValues = null;
+	static String outputFName = null;
 
-	
     /**
      * Creates new form Scene1
      */
@@ -210,6 +210,7 @@ public class Scene1 extends javax.swing.JFrame {
 	        File selectedFile = fileChooser.getSelectedFile();
 
             ArrayList<JSONItem> img = Main.postImage(selectedFile.getAbsolutePath());
+            outputFName = fileChooser.getSelectedFile().getName();
             Main.getTemplates();
 
             Main.compareLetters(img);
