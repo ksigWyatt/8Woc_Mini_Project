@@ -183,20 +183,14 @@ public class Scene1 extends javax.swing.JFrame {
         int returnValue = fileChooser.showOpenDialog(null);
         if (returnValue == JFileChooser.APPROVE_OPTION) {
 	        File selectedFile = fileChooser.getSelectedFile();
-
             ArrayList<JSONItem> img = Main.postImage(selectedFile.getAbsolutePath());
             outputFName = fileChooser.getSelectedFile().getName();
+            fileLocation = fileChooser.getSelectedFile().getName();
             Main.getTemplates();
-
             Main.compareLetters(img);
-
-
 	        successImage_label.setText("Upload complete");
         }
-
 	        successImage_label.setText("Upload complete");
-	        
-		 
   	}
     
     private void done_btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_done_btnActionPerformed
@@ -218,14 +212,13 @@ public class Scene1 extends javax.swing.JFrame {
     }//GEN-LAST:event_save_btnActionPerformed
 
    
-    String fileLocation;
+    static String fileLocation;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton done_btn;
     private javax.swing.JFileChooser fileChooser;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    //private javax.swing.JButton save_btn;
     private javax.swing.JLabel successImage_label;
     private javax.swing.JButton upload_btn;
     // End of variables declaration//GEN-END:variables

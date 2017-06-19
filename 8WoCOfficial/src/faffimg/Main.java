@@ -55,7 +55,7 @@ public class Main {
 
 		 //START HERE
 		outputTextArray.add(s);
-		 System.out.println( s );
+		 System.out.println(s);
 	 }
  }
 
@@ -65,7 +65,7 @@ public class Main {
 	 String output = "";
 
 	 try{
-	 	File file = new File("Hello.txt");
+	 	File file = new File(formatTextFileName(Scene1.fileLocation));
 	 	writer = new BufferedWriter(new FileWriter(file));
 	 	for (String str : outputTextArray){
 	 		writer.write(str);
@@ -74,7 +74,7 @@ public class Main {
 	 }catch (Exception e){
 	 	System.out.println(e);
 	 }
-	 FileReader reader = new FileReader("Hello.txt");
+	 FileReader reader = new FileReader(formatTextFileName(Scene1.fileLocation));
 	 for (String str : outputTextArray){
 		output = output + str;
 	 }
@@ -142,6 +142,16 @@ public class Main {
 
 	 return temp;
  }
+
+ 	public static String formatTextFileName(String imageFileName){
+		String []textFileName = imageFileName.split("\\.");
+	 	if(!textFileName[1].equals("txt")){
+			 textFileName[1]=".txt";
+	 	}
+	 	String fileName = textFileName[0] + textFileName[1];
+	 	System.out.println(fileName);
+	 	return fileName;
+ 	}
 
 
 }
